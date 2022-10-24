@@ -37,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'twist-mfe',
+      name: 'twistmfe',
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App',
