@@ -32,12 +32,15 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.jsx', '.js', '.json', '.css', '.scss', '.jpg', 'jpeg', 'png'],
+  },
   plugins: [
     new ModuleFederationPlugin({
       name: 'app2',
       filename: 'remoteEntry.js',
       exposes: {
-        './Widget': './src/Widget',
+        './App': './src/App',
       },
       shared: {
         moment: deps.moment,
